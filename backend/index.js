@@ -69,7 +69,7 @@ client.on('message', (topic, message) => {
   for (var key in reading) {
     readings[key] = reading[key];
   }
-  readings['date'] = Date.now;
+  readings['date'] = new Date()
   console.log(readings);
 
 
