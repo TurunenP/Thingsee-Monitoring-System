@@ -49,7 +49,15 @@ const thingseeSensorSchema = mongoose.Schema({
     type: Number,
     default: 0,
   },
-});
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+},
+{
+  timestamps: true,
+}
+);
 
 const ThingseeSensor = mongoose.model("ThingseeSensor", thingseeSensorSchema);
 

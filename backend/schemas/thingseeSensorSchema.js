@@ -61,6 +61,10 @@ const thingseeSensorSchema = mongoose.Schema({
     required: true,
     default: 0,
   },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
 });
 
 module.exports = thingseeSensorSchema;
