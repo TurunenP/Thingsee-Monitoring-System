@@ -77,7 +77,7 @@ client.on('message', (topic, message) => {
 })
 
 function sendPostRequest() {
-  const ec2Url = 'https://ec2-65-2-184-167.ap-south-1.compute.amazonaws.com/:3000';
+  const ec2Url = 'https://ec2-65-2-184-167.ap-south-1.compute.amazonaws.com:3000';
   axios
     .post("${ec2Url}/thingseeSensor", readings)
     .then((response) => {
