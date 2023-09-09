@@ -15,8 +15,8 @@ app.use(express.json());
 const username = "Dip";
 const password = "ban00ban@";
 const encodedPassword = encodeURIComponent(password);
-
-const mongoURI = `mongodb+srv://${username}:${encodedPassword}@cluster0.9ia4y.mongodb.net/thingsee?retryWrites=true&w=majority`;
+//const mongoURI = `mongodb+srv://${username}:${encodedPassword}@cluster0.9ia4y.mongodb.net/thingsee?retryWrites=true&w=majority`;
+  const mongoURI = `mongodb+srv://${username}:${encodedPassword}@cluster0.9ia4y.mongodb.net/thingsee?retryWrites=true&w=majority`;
 
 
 mongoose
@@ -77,8 +77,9 @@ client.on('message', (topic, message) => {
 })
 
 function sendPostRequest() {
+  const ec2Url = 'https://ec2-65-2-184-167.ap-south-1.compute.amazonaws.com/:3000';
   axios
-    .post("http://localhost:3000/thingseeSensor", readings)
+    .post("${ec2Url}/thingseeSensor", readings)
     .then((response) => {
       console.log("Data Save successful");
     })
