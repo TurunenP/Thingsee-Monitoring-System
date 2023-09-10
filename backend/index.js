@@ -71,7 +71,7 @@ client.on('message', (topic, message) => {
   }
   readings['date'] = new Date()
   console.log(readings);
-  sendPostRequest()
+
 
   
 })
@@ -81,7 +81,7 @@ function sendPostRequest() {
   axios
     .post("${ec2Url}/thingseeSensor", readings)
     .then((response) => {
-      console.log("Data Save successful");
+      console.log("POST request successful");
     })
     .catch((error) => {
       console.error("Error sending POST request:", error.message);
@@ -89,7 +89,7 @@ function sendPostRequest() {
 
 }
 
-//setInterval(sendPostRequest, 360000);
+setInterval(sendPostRequest, 60000);
 
 function errorHandler(err, req, res, next) {
   if (res.headersSent) {
