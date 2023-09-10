@@ -9,14 +9,12 @@ const thingseeSensorHandler = require("./routeHandler/thingseeSensorHandler");
 const app = express();
 app.use(express.json());
 
-//mongoose.set('strictQuery', false);
 
-//const mongoURI = "mongodb+srv://Dip:ban00ban@@cluster0.9ia4y.mongodb.net/thingsee?retryWrites=true&w=majority";
 const username = "Dip";
 const password = "ban00ban@";
 const encodedPassword = encodeURIComponent(password);
-//const mongoURI = `mongodb+srv://${username}:${encodedPassword}@cluster0.9ia4y.mongodb.net/thingsee?retryWrites=true&w=majority`;
-  const mongoURI = `mongodb+srv://${username}:${encodedPassword}@cluster0.9ia4y.mongodb.net/thingsee?retryWrites=true&w=majority`;
+
+const mongoURI = `mongodb+srv://${username}:${encodedPassword}@cluster0.9ia4y.mongodb.net/thingsee?retryWrites=true&w=majority`;
 
 
 mongoose
@@ -71,17 +69,16 @@ client.on('message', (topic, message) => {
   }
   readings['date'] = new Date()
   console.log(readings);
-
+  sendPostRequest()
 
   
 })
 
 function sendPostRequest() {
-  const ec2Url = 'https://ec2-65-2-184-167.ap-south-1.compute.amazonaws.com';
   axios
-    .post("${ec2Url}/thingseeSensor", readings)
+    .post("http://localhost:3000/thingseeSensor", readings)
     .then((response) => {
-      console.log("POST request successful");
+      console.log("Data Save successful");
     })
     .catch((error) => {
       console.error("Error sending POST request:", error.message);
@@ -89,7 +86,7 @@ function sendPostRequest() {
 
 }
 
-setInterval(sendPostRequest, 60000);
+//setInterval(sendPostRequest, 360000);
 
 function errorHandler(err, req, res, next) {
   if (res.headersSent) {
