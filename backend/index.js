@@ -14,7 +14,7 @@ const username = "Dip";
 const password = "ban00ban@";
 const encodedPassword = encodeURIComponent(password);
 
-const mongoURI = `mongodb+srv://${username}:${encodedPassword}@cluster0.9ia4y.mongodb.net/thingsee?retryWrites=true&w=majority`;
+const mongoURI = `mongodb+srv://the-chapal:chapal@cluster0.m2ptazw.mongodb.net/thingsee?retryWrites=true&w=majority`;
 
 
 mongoose
@@ -73,7 +73,7 @@ client.on('message', (topic, message) => {
 
   
 })
-
+const port = process.env.PORT || 3000;
 function sendPostRequest() {
   axios
     .post("http://localhost:3000/thingseeSensor", readings)
@@ -96,7 +96,7 @@ function errorHandler(err, req, res, next) {
 }
 
 
-const port = process.env.PORT || 3000;
+
 app.listen(port, () => {
   console.log(`App listening at port ${port}`);
 });
