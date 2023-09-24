@@ -21,6 +21,33 @@ router.get("/", async (req, res) => {
   }
 });
 
+// GET the Latest ThingseeSensor Data
+router.get("/latestdata", async (req, res) => {
+  try {
+    // Retrieve the latest data
+    const latestData = await ThingseeSensor.findOne({}, {}, { sort: { date: -1 } });
+
+    if (!latestData) {
+      // If no data is found, return a 404 response
+      res.status(404).json({
+        message: "No latest data found",
+      });
+
+    } else {
+      res.status(200).json({
+        result: latestData,
+        message: "Success",
+      });
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      error: "There was a server-side error!",
+    });
+  }
+});
+
+
 // GET A ThingseeSensor by ID
 router.get("/:id", async (req, res) => {
   try {

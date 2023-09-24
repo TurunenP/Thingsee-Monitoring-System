@@ -46,18 +46,18 @@ client.on('connect', () => {
 })
 
 var readings = {
-  'in': 0,
-  'out': 0,
-  'totalIn': 0,
-  'totalOut': 0,
+  'in': 3,
+  'out': 2,
+  'totalIn': 10,
+  'totalOut': 4,
   'historicalIn': 0,
   'historicalOut': 0,
   'amountIn': 0,
-  'carbonDioxide': 0,
-  'tvoc': 0,
-  'temp': 0,
-  'humd': 0,
-  'airp': 0,
+  'carbonDioxide': 800,
+  'tvoc': 310,
+  'temp': 20,
+  'humd': 60,
+  'airp': 100297.719,
 };
 // handle incoming messages
 client.on('message', (topic, message) => {
@@ -73,10 +73,10 @@ client.on('message', (topic, message) => {
 
   
 })
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 function sendPostRequest() {
   axios
-    .post("http://localhost:3000/thingseeSensor", readings)
+    .post("http://localhost:4000/thingseeSensor", readings)
     .then((response) => {
       console.log("Data Save successful");
     })
@@ -100,4 +100,3 @@ function errorHandler(err, req, res, next) {
 app.listen(port, () => {
   console.log(`App listening at port ${port}`);
 });
-
