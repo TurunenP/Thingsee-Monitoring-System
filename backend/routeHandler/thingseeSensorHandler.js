@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const router = express.Router();
 const thingseeSensorSchema = require("../schemas/thingseeSensorSchema");
+const moment = require('moment');
 
 const ThingseeSensor = mongoose.model("ThingseeSensor", thingseeSensorSchema);
 
@@ -9,6 +10,59 @@ const ThingseeSensor = mongoose.model("ThingseeSensor", thingseeSensorSchema);
 router.get("/", async (req, res) => {
   try {
     const sensors = await ThingseeSensor.find({});
+    res.status(200).json({
+      result: sensors,
+      message: "Success",
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      error: "There was a server-side error!",
+    });
+  }
+});
+
+router.get("/chart", async (req, res) => {
+  try {
+    // Calculate the start and end dates for your query (e.g., today)
+    const currentDate = moment().startOf('day');
+    const nextDate = moment(currentDate).add(1, 'day');
+
+    // Use aggregation to group data by date and limit to 20 entries per date
+    const sensors = await ThingseeSensor.aggregate([
+      {
+        $match: {
+          date: {
+            $gte: currentDate.toDate(),
+            $lt: nextDate.toDate(),
+          },
+        },
+      },
+      {
+        $group: {
+          _id: {
+            year: { $year: "$date" },
+            month: { $month: "$date" },
+            day: { $dayOfMonth: "$date" },
+          },
+          data: { $push: "$$ROOT" },
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          date: {
+            $dateFromParts: {
+              year: "$_id.year",
+              month: "$_id.month",
+              day: "$_id.day",
+            },
+          },
+          data: { $slice: ["$data", 0, 20] }, // Limit to 20 entries per date
+        },
+      },
+    ]);
+
     res.status(200).json({
       result: sensors,
       message: "Success",

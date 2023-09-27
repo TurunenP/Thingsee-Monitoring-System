@@ -4,10 +4,12 @@ const axios = require("axios");
 const mqtt = require('mqtt')
 const fs = require('fs')
 const thingseeSensorHandler = require("./routeHandler/thingseeSensorHandler");
-
+const cors = require('cors');
 
 const app = express();
 app.use(express.json());
+
+app.use(cors());
 
 
 const username = "Dip";
