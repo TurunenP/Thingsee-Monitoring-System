@@ -18,6 +18,7 @@ Install project dependencies:
 
 bash
 Copy code
+cd backend
 npm install
 Usage
 To start the application, run the following command:
