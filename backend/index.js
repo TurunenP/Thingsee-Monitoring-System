@@ -48,18 +48,18 @@ client.on('connect', () => {
 })
 
 var readings = {
-  'in': 3,
-  'out': 2,
-  'totalIn': 10,
-  'totalOut': 4,
+  'in': 0,
+  'out': 0,
+  'totalIn': 0,
+  'totalOut': 0,
   'historicalIn': 0,
   'historicalOut': 0,
   'amountIn': 0,
-  'carbonDioxide': 800,
-  'tvoc': 310,
-  'temp': 20,
-  'humd': 60,
-  'airp': 100297.719,
+  'carbonDioxide': 0,
+  'tvoc': 0,
+  'temp': 0,
+  'humd': 0,
+  'airp': 0,
 };
 // handle incoming messages
 client.on('message', (topic, message) => {
