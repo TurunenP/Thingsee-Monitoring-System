@@ -44,6 +44,9 @@ The server will be running at http://localhost:4000.
 ## Contributor
 This project was developed by:
 
+- Shaik Chapal - [@Shaik-Chapal](https://github.com/Shaik-Chapal/Thingsee-Monitoring-System.git)
+- 
+
 Name: Purity Turunen - [@TurunenP](https://github.com/Shaik-Chapal/Thingsee-Monitoring-System)
 Name: Shaik-Chapal: - [@Shaik-Chapal](https://github.com/Shaik-Chapal/Thingsee-Monitoring-System)
 Name: Divine Kweche Ebechue - [@Kweche-Ebechue-Divine](https://github.com/Shaik-Chapal/Thingsee-Monitoring-System)
