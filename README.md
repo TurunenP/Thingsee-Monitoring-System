@@ -1,5 +1,16 @@
 # Thingsee-Monitoring-System
 
+### Homepage
+
+
+## Tech used
+
+- [(Expressjs)](https://expressjs.com/): Expressjs provides a robust set of features for building the web application.
+- [(Mongoosejs)](https://mongoosejs.com/): Mongoose is an ODM (Object Document Mapper) library for MongoDB and Node.js, simplifying interactions with MongoDB by providing a schema-based solution.
+- [(Momentjs)](https://momentjs.com/): The website relies on React as its primary JavaScript library for constructing the user interface. React is a widely adopted choice for crafting dynamic and engaging web applications.
+- [(Mongodb)](https://www.mongodb.com/): MongoDB is a popular NoSQL database that stores data in flexible, JSON-like BSON (Binary JSON) format.
+
+
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
