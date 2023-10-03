@@ -2,6 +2,8 @@
 
 ### Homepage
 
+![Homepage](https://github.com/Shaik-Chapal/Thingsee-Monitoring-System/assets/43337898/4654fcb8-2d61-4157-ada3-0e3c904a617e)
+
 
 ## Tech used
 
