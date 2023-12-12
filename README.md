@@ -1,27 +1,4 @@
 # Thingsee-Monitoring-System
-The Thingsee Sensor project, inspired by Haltian's IoT devices (Thingsee Air and Thingsee Count), utilizes an open weather API to enable precise air quality monitoring in various facilities. Integrating IoT devices, the application provides real-time data with advanced detection capabilities, ensuring accurate and up-to-the-minute air quality information. It seamlessly incorporates an outdoor weather API, offering users a holistic view of indoor air quality from Thingsee devices and external weather conditions.
-
-
-## Acknowledgements
-
-- [Thingsee AIR: (Haltian)](https://haltian.com/product/thingsee-air/)
-
-Thingsee AIR serves as a battery-operated wireless IoT sensor designed for monitoring indoor air quality. It tracks parameters such as Co², TVOC, temperature, barometric pressure, and humidity, offering a comprehensive view of both current air quality data and historical data.
-
-- [Thingsee COUNT: (Haltian)](https://haltian.com/product/thingsee-count-people-counter/)
-
-Thingsee COUNT: Thingsee COUNT is an IoT sensor device capable of sensing movement beneath it and providing reports on the frequency and direction of detected movements.
-- [OpenWeatherMap: (Open weather)](https://openweathermap.org/)
-
-OpenWeatherMap, an online service under the ownership of OpenWeather Ltd, delivers worldwide weather information through its API. This includes up-to-date weather conditions, forecasts, nowcasts, and historical weather data.
-
-
-### Haltian support
-- **Sensors**
-- **Gateways**
-- **Certificates**
-- **Documentations**
-
 
 ### Tech used
 
