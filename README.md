@@ -23,29 +23,6 @@ OpenWeatherMap, an online service under the ownership of OpenWeather Ltd, delive
 - **Documentations**
 
 
-# HOMEPAGE
-
-### Website View
-
-![Homepage](https://github.com/Shaik-Chapal/Thingsee-Monitoring-System/assets/43337898/4654fcb8-2d61-4157-ada3-0e3c904a617e)
-
-
-### Mobile View
-![mobile](https://github.com/Shaik-Chapal/thingsee-frontend/assets/43337898/9f5e7767-947e-4e3c-b371-a121f658cf6a)
-
-
-## Project Management/Productivity Tools used
-
-**Code Editor:** - [(Visual Studio Code)](https://code.visualstudio.com/)
-
-
-**Project management and tool:**  - [(Trello)](https://trello.com/templates/project-management): Below;
-
-
-![trello](https://github.com/Shaik-Chapal/thingsee-frontend/assets/43337898/f83bc8c1-bae7-4301-9c57-86a19f45704f)
-
-
-
 ### Tech used
 
 - [(Expressjs)](https://expressjs.com/): Expressjs provides a robust set of features for building the web application.
@@ -55,7 +32,7 @@ OpenWeatherMap, an online service under the ownership of OpenWeather Ltd, delive
 - [AWS)](https://aws.amazon.com/free/webapps/): AWS is a free hosting for managing websites and web apps in the cloud
 
 
-## Getting started
+# Getting started
 Clone the repository on a directory of your choice.
 
 ### Prerequisites
