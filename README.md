@@ -1,5 +1,10 @@
 # Thingsee-Monitoring-System
 
+### Methodology for the web application
+
+![methodology](https://github.com/Shaik-Chapal/Thingsee-Monitoring-System/assets/43337898/7a370d4e-c1ed-41e3-b1a1-6f23bd48a5f6)
+
+
 ### Tech used
 
 - [(Expressjs)](https://expressjs.com/): Expressjs provides a robust set of features for building the web application.
@@ -12,14 +17,15 @@
 # Getting started
 Clone the repository on a directory of your choice.
 
-### Prerequisites
+
+## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 
 - Node.js installed on your machine
 - npm (Node Package Manager) installed on your machine
 
-### Installation
+## Installation
 
 1. **Clone this repository:**
 
@@ -44,7 +50,8 @@ The server will be running at http://localhost:4000.
 This project was developed by:
 
 - Shaik Chapal - [@Shaik-Chapal](https://github.com/Shaik-Chapal/Thingsee-Monitoring-System.git)
-- Purity Turunen - [@TurunenP](https://github.com/Shaik-Chapal/Thingsee-Monitoring-System)
+- Purity Turunen - [@TurunenP](https://github.com/TurunenP/Thingsee-Monitoring-System.git)
 - Divine Kweche Ebechue - [@Kweche-Ebechue-Divine](https://github.com/Shaik-Chapal/Thingsee-Monitoring-System)
 - Manish Panthi - [@Manish Panthi](https://github.com/Shaik-Chapal/Thingsee-Monitoring-System)
+
 
